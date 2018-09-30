@@ -74,20 +74,24 @@ module.exports = window.$;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {__webpack_require__(4)
-__webpack_require__(6)
-
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__p2_js__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__p2_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__p2_js__);
+__webpack_require__(4)
 __webpack_require__(7)
+
 __webpack_require__(8)
+__webpack_require__(9)
 
 
-// import "./p2.js"
 
-var Preloader = __webpack_require__(9)
 
-const arr = [,0.004,10.4]
+var Preloader = __webpack_require__(11)
+
+const arr = [,0.004,57]
 
 
 /**
@@ -98,15 +102,27 @@ function init () {
     direction: 'vertical'
   })
 
+  var maya = new Swiper('#maya',{direction : 'horizontal'})
+
   mySwiper.on('transitionEnd', function (e) {
     if(e.activeIndex === 1) {
-      const el = document.querySelector('.p2 .num');
-      let demo = new CountUp(el,100,arr[e.activeIndex],3);
+      var el = document.querySelector('.p2 .num');
+      var demo = new CountUp(el,100,arr[e.activeIndex],3);
       if(!demo.error) {
         demo.start()
       } else {
         console.error(demo.error)
       }
+    } else if(e.activeIndex === 2) {
+      var el = document.querySelector('.p3 .num');
+      var demo = new CountUp(el,0,arr[e.activeIndex]);
+      if(!demo.error) {
+        demo.start()
+      } else {
+        console.error(demo.error)
+      }
+    } else if(e.activeIndex === 3) {
+      debugger
     }
 
  
@@ -124,7 +140,6 @@ preloader.addProgressListener(function (loaded, length) {
   console.log('loaded', loaded, length, loaded / length)
 })
 preloader.addCompletionListener(function () {
-  debugger
   $('#o2_loading').remove()
   $('#o2_main').removeClass('hide')
 
@@ -133,7 +148,7 @@ preloader.addCompletionListener(function () {
 preloader.start()
 
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 2 */
@@ -161,7 +176,7 @@ module.exports = "/* Zepto v1.2.0 - zepto event ajax form ie - zeptojs.com/licen
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n\n<head>\n    <script src=\"https://cdn.bootcss.com/countup.js/1.9.3/countUp.min.js\"></script>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no\">\n  <meta name=\"format-detection\" content=\"telephone=no\">\n  <title>ELF Swiper Template</title>\n\n  <!-- 不要删除或改变下面这行代码 -->\n  {{{__HEAD_JAVASCRIPT__}}}\n\n</head>\n\n<body>\n  <!-- S loading 动画，对应的样式在 src/css/loading.scss -->\n  <div id=\"o2_loading\" class=\"loading\">\n    <div class=\"inner\">\n      <i class=\"before\"></i>\n      <i class=\"after\"></i>\n    </div>\n    <div class=\"text\">loading</div>\n  </div>\n  <!-- E loading -->\n  <!-- S 主体内容 -->\n  <!-- S 全局元素 -->\n  \n  <div id=\"o2_main\" class=\"main hide\">\n    <div class=\"swiper-container\" id=\"o2_swiper\">\n      <div class=\"swiper-wrapper\">\n        <!-- S Slogon 页面 -->\n        <div class=\"swiper-slide p1\">\n          <div class=\"light\">\n              <div class=\"slogon\">这是一家以速度见长的公司</div>\n          </div>\n        </div>\n        <!-- S JOY 场景 -->\n        <div class=\"swiper-slide p2\">\n          <div class=\"light\">\n          </div>\n          <img class=\"dog\" src=\"" + __webpack_require__(5) + "\" alt=\"\">\n          <div class=\"text text-top\">The speed of life beginning</div>\n          <div class=\"text text-bottom\">快才拥有可能，这是一家以速度见长的公司</div>\n          <span class=\"num\"></span>\n        </div>\n        <div class=\"swiper-slide\">\n          <h2 class=\"title\">JavaScript</h2>\n          <div class=\"logo\">\n            <!-- <img src=\"./img/javascript.png\" data-preload/> -->\n          </div>\n        </div>\n        <div class=\"swiper-slide\">\n          <h2 class=\"title\">Node.js</h2>\n          <div class=\"logo\">\n            <!-- <img src=\"./img/nodejs.png\" data-preload/> -->\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- E 主体内容 -->\n</body>\n\n</html>\n";
+module.exports = "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n\n<head>\n    <script src=\"https://cdn.bootcss.com/countup.js/1.9.3/countUp.min.js\"></script>\n  <meta charset=\"UTF-8\">\n  <script src=\"//pingjs.qq.com/h5/stats.js?v2.0.4\" name=\"MTAH5\" sid=\"500470721\" cid=\"500470727\"></script>\n  <script src=\"//wqs.jd.com/promote/quark/atlogs.2.0.min.js\"></script>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no\">\n  <meta name=\"format-detection\" content=\"telephone=no\">\n  <title>ELF Swiper Template</title>\n\n  <!-- 不要删除或改变下面这行代码 -->\n  {{{__HEAD_JAVASCRIPT__}}}\n\n</head>\n\n<body>\n  <!-- S loading 动画，对应的样式在 src/css/loading.scss -->\n  <div id=\"o2_loading\" class=\"loading\">\n    <div class=\"inner\">\n      <i class=\"before\"></i>\n      <i class=\"after\"></i>\n    </div>\n    <div class=\"text\">loading</div>\n  </div>\n  <!-- E loading -->\n  <!-- S 主体内容 -->\n  <!-- S 全局元素 -->\n  \n  <div id=\"o2_main\" class=\"main hide\">\n    <div class=\"swiper-container\" id=\"o2_swiper\">\n      <div class=\"swiper-wrapper\">\n        <!-- S Slogon 页面 -->\n        <div class=\"swiper-slide p1\">\n          <div class=\"light\">\n              <div class=\"slogon\">这是一家以速度见长的公司</div>\n          </div>\n        </div>\n        <!-- S JOY 场景 -->\n        <div class=\"swiper-slide p2\">\n          <div class=\"light\">\n          </div>\n          <img class=\"dog\" src=\"" + __webpack_require__(5) + "\" alt=\"\">\n          <div class=\"text text-top\">The speed of life beginning</div>\n          <div class=\"text text-bottom\">快才拥有可能，这是一家以速度见长的公司</div>\n          <span class=\"num\"></span>\n        </div>\n        <div class=\"swiper-slide p3\">\n          <div class=\"light\"></div>\n          <!-- <div class=\"dog\"></div> -->\n          <img class=\"dog\" src=\"" + __webpack_require__(6) + "\" alt=\"\">\n          <div class=\"text-top\">快为取悦自己，加班调休1:1，越努力越快乐</div>\n          <div class=\"num\"></div>\n        </div>\n        <div class=\"swiper-slide p4\">\n          <div class=\"logo-ran\">燃</div>\n          <div class=\"text-slogon\">更快到达你想要的未来</div>\n          <div class=\"cube-1\"><span></span></div>\n          <div class=\"cube-cnt-2\">\n            <div class=\"cube-2\">\n              <span></span>\n            </div>\n          </div>\n          <div class=\"cube-cnt-3\">\n            <div class=\"cube-3\">\n              <span></span>\n            </div>\n          </div>\n          <div class=\"text-title\">京东2018校园招聘</div>\n          <div class=\"text-detail\">\n            <p>招聘人群： 2018年毕业</p>\n            <p>全日制本科、硕士、博士</p>\n          </div>\n        </div>\n        <div class=\"swiper-slide p5 horiz\" id=\"maya\">\n            <div class=\"horiz-slide\">此地</div>\n            <div class=\"horiz-slide\">占坑</div>\n            <div></div>\n          \n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- E 主体内容 -->\n</body>\n\n</html>\n";
 
 /***/ }),
 /* 5 */
@@ -171,9 +186,9 @@ module.exports = __webpack_require__.p + "img/dog-scene.png";
 
 /***/ }),
 /* 6 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+module.exports = __webpack_require__.p + "img/dog-scene-03.png";
 
 /***/ }),
 /* 7 */
@@ -183,6 +198,12 @@ module.exports = __webpack_require__.p + "img/dog-scene.png";
 
 /***/ }),
 /* 8 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_Zepto) {/**
@@ -5543,7 +5564,20 @@ else if (typeof define === 'function' && define.amd) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 9 */
+/* 10 */
+/***/ (function(module, exports) {
+
+document.querySelector('.p3').addEventListener('touchstart',function(e) {
+    var light = document.querySelector(".p3 .light");
+    var dog = document.querySelector(".p3 .dog");
+    dog.style.transform = `translate(${e.touches[0].pageX/-10}px,${e.touches[0].pageY/-10}px)`;
+    dog.style.transition = 'transform .6s ease-in-out'
+    light.style.transform = `translate(${e.touches[0].pageX/-10}px,${e.touches[0].pageY/-10}px)`;
+    light.style.transition = 'transform .6s ease'
+})
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (root, factory) {
